@@ -18,6 +18,9 @@
   Alcance: una página a la medida, 100% responsiva, contacto por llamada y WhatsApp, SEO básico
   (title, description, datos estructurados, Open Graph).
   Flujo de contacto: llamada (acción principal) y WhatsApp (secundaria). Sin formulario, a petición del cliente.
+  Elementos tomados de referentes (Pimlico Plumbers, Londres; Roto-Rooter, Los Ángeles): señales de confianza bajo
+  el titular, lista de síntomas, aviso de seguridad por gas, argumento local (agua dura/altitud), NAP en el pie.
+  Dirección "Col. Ejemplo" es de ejemplo: usar la misma del Perfil de Empresa en Google.
 
   Para adaptarlo al cliente real:
     · Marca: ThermoFix (logos del prospecto en assets/; originales en assets/marca/).
@@ -85,15 +88,18 @@ header{position:sticky;top:0;z-index:50;background:rgba(254,254,254,.96);backdro
 .logo-word{display:block;font-weight:700;font-size:1.5rem;letter-spacing:-.01em;line-height:1;color:var(--navy)}
 .logo-word em{font-style:normal;color:var(--red)}
 .logo-sub{display:block;font-size:.72rem;font-weight:500;color:var(--muted);margin-top:4px;line-height:1}
-.nav-links{display:flex;gap:36px;font-size:.95rem;font-weight:500}
+.nav-links{display:flex;gap:28px;white-space:nowrap;font-size:.95rem;font-weight:500}
 .nav-links a{text-decoration:none;color:var(--ink-2);padding:6px 0;border-bottom:2px solid transparent}
 .nav-links a:hover{color:var(--navy);border-bottom-color:var(--red)}
 .nav-actions{display:flex;align-items:center;gap:10px;justify-self:end}
 .nav-actions .btn{padding:.72rem 1rem;font-size:.92rem}
-.nav-tel{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;text-decoration:none;color:var(--navy);padding:.6rem .4rem}
-.nav-tel svg{width:18px;height:18px;color:var(--red)}
+.nav-tel{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);padding:.4rem .4rem;line-height:1.15}
+.nav-tel span{white-space:nowrap}
+.nav-tel small{display:block;font-size:.7rem;font-weight:600;color:var(--red-text)}
+.nav-tel b{display:block;font-size:.98rem;font-weight:600}
+.nav-tel svg{width:20px;height:20px;color:var(--red)}
 .nav-tel:hover{color:var(--red-text)}
-@media (max-width:980px){.nav{grid-template-columns:auto 1fr}.nav-links{display:none}}
+@media (max-width:1060px){.nav{grid-template-columns:auto 1fr}.nav-links{display:none}}
 @media (max-width:640px){.nav{height:68px;gap:12px}.nav-tel{display:none}.logo-sub{display:none}.logo img{width:40px}.logo-word{font-size:1.35rem}}
 @media (max-width:380px){.nav-actions .btn .txt{display:none}.nav-actions .btn{padding:.7rem}}
 
@@ -127,6 +133,27 @@ header{position:sticky;top:0;z-index:50;background:rgba(254,254,254,.96);backdro
 .plate-status .led::before{content:"";width:9px;height:9px;border-radius:50%;background:#4CC777;box-shadow:0 0 10px #4CC777}
 @media (max-width:900px){.plate{justify-self:stretch;max-width:none}}
 @media (max-width:420px){.plate{padding:24px 20px 20px}.plate-row{grid-template-columns:88px 1fr}.plate-top .wm{font-size:1.25rem}.plate-top .wm img{width:32px}}
+
+/* Señales de confianza bajo el titular (patrón Pimlico) */
+.ticks{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px}
+.ticks li{display:inline-flex;align-items:center;gap:8px;font-weight:500;color:var(--navy);font-size:.98rem}
+.ticks li::before{content:"";width:20px;height:20px;border-radius:50%;flex:none;background:var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m6 12.5 4 4 8-9' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+
+/* Síntomas + aviso de gas */
+.signs-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+.signs{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.signs li{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.signs b{display:block;font-size:1rem;margin-bottom:2px}
+.signs span{font-size:.92rem;color:var(--muted)}
+.local{margin-top:22px;color:var(--ink-2);font-size:.98rem;border-left:3px solid var(--navy);padding-left:16px}
+.gas{background:#FFF1F1;border:1.5px solid var(--red);border-radius:14px;padding:24px}
+.gas h3{font-size:1.15rem;color:var(--red-text);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.gas h3 svg{width:22px;height:22px;flex:none}
+.gas ol{padding-left:20px;color:var(--ink-2);font-size:.95rem}
+.gas ol li{margin:6px 0}
+.gas p{margin-top:12px;font-size:.92rem;color:var(--ink-2)}
+@media (max-width:860px){.signs-grid{grid-template-columns:1fr}}
+@media (max-width:520px){.signs{grid-template-columns:1fr}}
 
 /* Marcas */
 .brands{border-top:3px solid var(--navy);border-bottom:1px solid var(--line)}
@@ -163,7 +190,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(254,254,254,.96);backdro
 .step .n{width:42px;height:42px;border-radius:50%;border:2px solid var(--red);color:var(--red-text);display:grid;place-items:center;font-weight:700;font-size:1.05rem}
 .step h3{font-size:1.2rem;margin:14px 0 8px}
 .step p{color:var(--ink-2)}
-.guarantee{margin-top:40px;display:flex;align-items:center;gap:18px;background:var(--white);border:1.5px solid var(--navy);border-radius:14px;padding:20px 24px}
+.guarantee{margin-top:40px;display:flex;align-items:center;gap:18px;background:var(--paper);border:1.5px solid var(--navy);border-radius:14px;padding:20px 24px}
 .guarantee .seal{flex:none;width:68px;height:68px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;text-align:center;font-size:.7rem;font-weight:500;line-height:1.05}
 .guarantee .seal b{display:block;font-size:1.5rem;font-weight:700;line-height:1}
 .guarantee p{color:var(--ink-2)}
@@ -183,6 +210,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(254,254,254,.96);backdro
 .call-card .btn{width:100%;margin-top:14px}
 .call-card .btn-call{margin-top:26px;font-size:1.05rem;padding:1.1rem}
 .call-card .or{display:block;margin-top:18px;font-size:.85rem;color:#B8C6D4}
+.call-card .fine{display:block;margin-top:16px;font-size:.75rem;color:#8FA3B8}
+.nap{font-style:normal}
 @media (max-width:860px){.contact{grid-template-columns:1fr;gap:36px}.call-card{padding:28px 22px}}
 
 /* Footer */
@@ -219,10 +248,10 @@ footer a:hover{color:#fff}
       <span><span class="logo-word">Thermo<em>Fix</em></span><span class="logo-sub">Especialistas en boilers alemanes</span></span>
     </a>
     <nav class="nav-links" aria-label="Principal">
-      <a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajamos</a><a href="#contacto">Contacto</a>
+      <a href="#sintomas">¿Cuándo llamar?</a><a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajamos</a><a href="#contacto">Contacto</a>
     </nav>
     <div class="nav-actions">
-      <a class="nav-tel" href="tel:+525500000000"><svg><use href="#i-phone"/></svg>55 0000 0000</a>
+      <a class="nav-tel" href="tel:+525500000000"><svg><use href="#i-phone"/></svg><span><small>Urgencias</small><b>55 0000 0000</b></span></a>
       <a class="btn btn-call nav-call" href="tel:+525500000000" aria-label="Llamar"><svg><use href="#i-phone"/></svg><span class="txt">Llamar</span></a>
     </div>
   </div>
@@ -239,7 +268,7 @@ footer a:hover{color:#fff}
         <a class="btn btn-call" href="tel:+525500000000"><svg><use href="#i-phone"/></svg>Llamar ahora</a>
         <a class="btn btn-outline js-wa" href="https://wa.me/525500000000" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
       </div>
-      <p class="hero-note">Lunes a sábado, 8:00 – 20:00 · Urgencias el mismo día</p>
+      <ul class="ticks"><li>Atención el mismo día</li><li>Sin cargos ocultos</li><li>Garantía de 6 meses por escrito</li></ul>
     </div>
 
     <dl class="plate" aria-label="Ficha del servicio">
@@ -264,6 +293,38 @@ footer a:hover{color:#fff}
   </div>
 </div>
 
+<section class="sec process-sec" id="sintomas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">¿Cuándo llamarnos?</span>
+      <h2>Señales de que tu boiler necesita un técnico</h2>
+    </div>
+    <div class="signs-grid">
+      <div>
+        <ul class="signs">
+          <li><b>No enciende</b><span>O se apaga a los pocos segundos.</span></li>
+          <li><b>Código de error en pantalla</b><span>F28, EA, F4… anótalo y llámanos.</span></li>
+          <li><b>Agua tibia o intermitente</b><span>Suele ser sarro en el intercambiador.</span></li>
+          <li><b>Ruidos o golpeteo</b><span>Silbidos, chasquidos o vibración al calentar.</span></li>
+          <li><b>Fugas o goteo</b><span>Agua bajo el equipo o en las conexiones.</span></li>
+          <li><b>Consumo de gas más alto</b><span>Combustión desajustada o equipo sucio.</span></li>
+        </ul>
+        <p class="local">En la Ciudad de México el agua dura acumula sarro y los 2,240 m de altitud cambian la combustión. Por eso aquí un mantenimiento anual hace más diferencia que en otras ciudades.</p>
+      </div>
+      <aside class="gas" aria-label="Si hueles a gas">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>¿Hueles a gas?</h3>
+        <ol>
+          <li>Cierra la llave de paso del gas.</li>
+          <li>Abre puertas y ventanas.</li>
+          <li>No enciendas luces, apagadores ni flamas.</li>
+          <li>Sal del lugar y llama al <b>911</b>.</li>
+        </ol>
+        <p>Cuando el lugar sea seguro, llámanos para revisar el equipo.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="servicios">
   <div class="wrap">
     <div class="sec-head">
@@ -285,7 +346,7 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
-<section class="sec process-sec" id="proceso">
+<section class="sec" id="proceso">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Cómo trabajamos</span>
@@ -325,6 +386,7 @@ footer a:hover{color:#fff}
       <a class="btn btn-call" href="tel:+525500000000"><svg><use href="#i-phone"/></svg>Llamar ahora</a>
       <span class="or">¿No puedes hablar ahora?</span>
       <a class="btn btn-wa js-wa" href="https://wa.me/525500000000" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+      <span class="fine">Urgencias del mismo día sujetas a disponibilidad y zona.</span>
     </div>
   </div>
 </section>
@@ -334,7 +396,7 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <div class="foot">
       <a href="#" class="logo"><img src="assets/thermofix-icono.png" alt="" width="46" height="45"><span class="logo-word">Thermo<em>Fix</em></span></a>
-      <span>Especialistas en boilers alemanes · CDMX · <a href="tel:+525500000000">55 0000 0000</a></span>
+      <address class="nap">ThermoFix · Col. Ejemplo, Ciudad de México · <a href="tel:+525500000000">55 0000 0000</a> · Lun–Sáb 8:00–20:00</address>
     </div>
     <p class="legal">Vaillant, Viessmann, Wolf, Bosch y Junkers son marcas registradas de sus respectivos titulares. ThermoFix es un servicio técnico independiente y no está afiliado a ninguna de ellas.<br>Sitio de demostración creado por NorthClick. Datos de contacto y precios son de ejemplo.</p>
   </div>
