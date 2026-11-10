@@ -3,15 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reparación de boilers alemanes en CDMX · Vaillant, Viessmann, Wolf, Bosch, Junkers | Kessel</title>
+<title>Reparación de boilers alemanes en CDMX · Vaillant, Viessmann, Wolf, Bosch, Junkers | ThermoFix</title>
 <meta name="description" content="Especialistas en boilers y calentadores alemanes en CDMX: Vaillant, Viessmann, Wolf, Bosch y Junkers. Diagnóstico de códigos de error, refacciones originales, precios publicados y garantía por escrito.">
-<meta name="theme-color" content="#151515">
+<meta name="theme-color" content="#002B56">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="ThermoFix · Especialistas en boilers alemanes en CDMX">
+<meta property="og:description" content="Vaillant, Viessmann, Wolf, Bosch y Junkers. Precios publicados y garantía por escrito.">
+<meta property="og:image" content="assets/og-thermofix.jpg">
+<meta property="og:type" content="website">
 <meta name="color-scheme" content="light">
 <!--
   DEMO de NorthClick — paquete Presencia Web (landing de una página).
   Estrategia: apropiarse de la categoría "boilers alemanes en CDMX" (ver diagnóstico de mercado, nov 2026).
   Para adaptarlo al cliente real, cambia:
-    · Nombre "Kessel" (marca de ejemplo), teléfono/WhatsApp (busca "0000"), correo.
+    · Marca: ThermoFix (logos del prospecto en assets/; originales en assets/marca/).
+    · Paleta oficial: azul marino #002B56, rojo #EE0000, blanco #FEFEFE (+ #01264D, #113D62, #8B9AA6, #000).
+    · Tipografías: Poppins 600/700 (logotipo y títulos), Inter (texto), JetBrains Mono (datos técnicos).
+    · Teléfono/WhatsApp (busca "0000") y correo son de ejemplo.
     · Precios en #precios y en el objeto BRANDS del script.
     · Reseñas (marcadas con data-demo) por reseñas reales de Google.
     · Zonas en #zonas y el JSON-LD del <head>.
@@ -19,12 +28,13 @@
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "HVACBusiness",
-  "name": "Kessel · Técnica en boilers alemanes",
+  "name": "ThermoFix",
+  "logo": "assets/thermofix-icono.png",
   "description": "Diagnóstico, reparación y mantenimiento de boilers y calentadores alemanes en CDMX.",
   "telephone": "+52 55 0000 0000",
   "areaServed": ["Miguel Hidalgo","Cuauhtémoc","Benito Juárez","Coyoacán","Álvaro Obregón","Cuajimalpa","Tlalpan","Naucalpan","Huixquilucan"],
@@ -36,49 +46,54 @@
 </script>
 <style>
 :root{
-  --paper:#F3F1EC; --paper-2:#E8E5DD; --card:#FBFAF7;
-  --ink:#151515; --ink-2:#34332F; --muted:#66645E; --line:#D3CFC4;
-  --signal:#C2351B; --signal-ink:#fff; --plate:#1D1E20; --plate-line:#3A3C40; --plate-text:#C9C6BE;
-  --ok:#2E8B4E; --wa:#1E8C48;
+  /* Paleta ThermoFix */
+  --navy:#002B56; --navy-deep:#01264D; --petrol:#113D62; --steel:#8B9AA6; --red:#EE0000; --white:#FEFEFE; --black:#000;
+  --paper:#F4F6F9; --paper-2:#E9EEF3; --card:var(--white);
+  --ink:var(--navy); --ink-2:#22364D; --muted:#55657A; --line:#D5DDE6;
+  --signal:var(--red); --signal-text:#C40000; --signal-ink:#fff;
+  --plate:var(--navy-deep); --plate-line:#1E4670; --plate-text:#B8C6D4;
+  --wa:#1E8C48;
   --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
-  --sans:Archivo,system-ui,sans-serif;
+  --sans:Inter,system-ui,sans-serif;
+  --display:Poppins,Inter,system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{font-family:var(--sans);font-stretch:100%;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 img,svg{display:block}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 :focus-visible{outline:2px solid var(--signal);outline-offset:3px}
 
-h1,h2,h3{font-weight:800;font-stretch:78%;letter-spacing:-.01em;line-height:.98;text-transform:uppercase}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.02em;line-height:1.08}
 .label{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .sec{padding:96px 0;border-top:1px solid var(--line)}
 .sec-head{display:grid;grid-template-columns:180px 1fr;gap:24px;margin-bottom:48px}
-.sec-head .label b{display:block;color:var(--signal);font-size:.95rem;margin-bottom:4px}
-.sec-head h2{font-size:clamp(2.1rem,5.4vw,3.9rem)}
+.sec-head .label b{display:block;color:var(--signal-text);font-size:.95rem;margin-bottom:4px}
+.sec-head h2{font-size:clamp(1.9rem,4.4vw,3.2rem)}
 .sec-head p{color:var(--ink-2);max-width:600px;margin-top:16px;font-size:1.08rem}
 @media (max-width:760px){.sec{padding:72px 0}.sec-head{grid-template-columns:1fr;gap:10px;margin-bottom:34px}}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font:600 1rem/1 var(--sans);padding:1rem 1.35rem;border-radius:4px;text-decoration:none;border:1.5px solid transparent;transition:background .15s,color .15s,border-color .15s;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font:600 1rem/1 var(--display);padding:1rem 1.35rem;border-radius:6px;text-decoration:none;border:1.5px solid transparent;transition:background .15s,color .15s,border-color .15s;cursor:pointer}
 .btn svg{width:19px;height:19px;flex:none}
 .btn-primary{background:var(--signal);color:var(--signal-ink)}
-.btn-primary:hover{background:#A82C15}
+.btn-primary:hover{background:#C40000}
 .btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
 .btn-ghost:hover{background:var(--ink);color:var(--paper)}
 
 /* Top strip + header */
-.strip{background:var(--ink);color:#BDBAB2;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase}
+.strip{background:var(--navy-deep);color:#AFC0D2;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase}
 .strip .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:8px;padding-bottom:8px}
 .strip .on{color:#fff;display:inline-flex;align-items:center;gap:8px}
 .strip .on::before{content:"";width:7px;height:7px;border-radius:50%;background:#4CC777}
 @media (max-width:640px){.strip .hide-sm{display:none}}
 @media (max-width:420px){.strip .tel{display:none}.strip .wrap{justify-content:center}}
-header{position:sticky;top:0;z-index:50;background:rgba(243,241,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:50;background:rgba(254,254,254,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo-mark{width:38px;height:38px;background:var(--ink);color:var(--paper);display:grid;place-items:center;border-radius:3px}
-.logo-word{font-weight:800;font-stretch:72%;font-size:1.55rem;letter-spacing:.02em;line-height:1;text-transform:uppercase}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{width:44px;height:auto}
+.logo-word{font-family:var(--display);font-weight:700;font-size:1.5rem;letter-spacing:-.01em;line-height:1;color:var(--navy)}
+.logo-word em,.wm em{font-style:normal;color:var(--red)}
 .logo-sub{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin-top:3px}
 .nav-links{display:flex;gap:26px;font-size:.92rem;font-weight:500}
 .nav-links a{text-decoration:none;color:var(--ink-2)}
@@ -90,28 +105,32 @@ header{position:sticky;top:0;z-index:50;background:rgba(243,241,236,.94);backdro
 /* Hero */
 .hero{padding:64px 0 84px}
 .hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(2.9rem,8vw,6.2rem);margin:18px 0 26px}
+.hero h1{font-size:clamp(2.5rem,6.4vw,4.7rem);margin:18px 0 24px}
 .hero h1 .sig{color:var(--signal)}
 .hero .lead{font-size:1.2rem;color:var(--ink-2);max-width:560px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 30px}
 .hero-facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;border-top:1px solid var(--line)}
 .hero-facts div{padding:14px 28px 0 0;margin-right:28px;border-right:1px solid var(--line)}
 .hero-facts div:last-child{border-right:0}
-.hero-facts b{display:block;font-weight:800;font-stretch:78%;font-size:1.7rem;line-height:1.1}
+.hero-facts b{display:block;font-family:var(--display);font-weight:700;font-size:1.55rem;line-height:1.15;color:var(--navy)}
 .hero-facts span{font-size:.86rem;color:var(--muted)}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:44px}.hero{padding:44px 0 64px}}
-@media (max-width:520px){.hero-facts{grid-template-columns:1fr 1fr 1fr}.hero-facts div{padding-right:10px;margin-right:10px}.hero-facts b{font-size:1.35rem}.hero-cta .btn{flex:1 1 100%}}
+@media (max-width:520px){.hero-facts{grid-template-columns:1fr 1fr 1fr}.hero-facts div{padding-right:10px;margin-right:10px}.hero-facts b{font-size:1.15rem}.hero-cta .btn{flex:1 1 100%}}
 
 /* Rating plate (Typenschild) */
-.plate{background:var(--plate);color:var(--plate-text);border-radius:6px;padding:26px 26px 22px;position:relative;font-family:var(--mono);font-size:.78rem;box-shadow:0 1px 0 #000,0 24px 50px -20px rgba(0,0,0,.45);max-width:460px;justify-self:end;width:100%}
-.plate::before,.plate::after,.plate .rv1,.plate .rv2{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#77797E,#2B2C2F)}
+.plate{background:var(--plate);color:var(--plate-text);border-radius:6px;padding:26px 26px 22px;position:relative;font-family:var(--mono);font-size:.78rem;box-shadow:0 1px 0 #000,0 24px 50px -20px rgba(0,43,86,.55);max-width:460px;justify-self:end;width:100%}
+.plate::before,.plate::after,.plate .rv1,.plate .rv2{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#9AA8B5,#22384F)}
 .plate::before{top:10px;left:10px}.plate::after{top:10px;right:10px}
 .plate .rv1{bottom:10px;left:10px}.plate .rv2{bottom:10px;right:10px}
-.plate-top{display:flex;justify-content:space-between;align-items:flex-end;padding:0 6px 14px;border-bottom:1px solid var(--plate-line)}
-.plate-top strong{font-family:var(--sans);font-weight:800;font-stretch:72%;font-size:1.6rem;letter-spacing:.03em;color:#fff;text-transform:uppercase;line-height:1}
+.plate-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 6px 14px;border-bottom:1px solid var(--plate-line)}
+.plate-top .wm{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:1.45rem;color:#fff;line-height:1}
+.plate-top .wm img{width:38px}
+.plate-top>span:last-child{white-space:nowrap}
+@media (max-width:420px){.plate-top .wm{font-size:1.25rem}.plate-top .wm img{width:32px}}
+.plate-top .wm em{color:#FF3B3B}
 .plate-row{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:10px 6px;border-bottom:1px solid var(--plate-line)}
-.plate-row dt{color:#87857F;text-transform:uppercase;letter-spacing:.05em}
-.plate-row dd{color:#F2F0EA}
+.plate-row dt{color:var(--steel);text-transform:uppercase;letter-spacing:.05em}
+.plate-row dd{color:var(--white)}
 .plate-status{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 6px 2px}
 .plate-status .led{display:inline-flex;align-items:center;gap:8px;color:#fff}
 .plate-status .led::before{content:"";width:9px;height:9px;border-radius:50%;background:#4CC777;box-shadow:0 0 10px #4CC777}
@@ -119,12 +138,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(243,241,236,.94);backdro
 @media (max-width:420px){.plate-row{grid-template-columns:96px 1fr}}
 
 /* Brands band */
-.brands{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--card)}
+.brands{border-top:3px solid var(--navy);border-bottom:1px solid var(--line);background:var(--card)}
 .brands-grid{display:grid;grid-template-columns:repeat(5,1fr)}
 .brand-tile{appearance:none;background:none;border:0;border-right:1px solid var(--line);padding:26px 18px;text-align:left;cursor:pointer;font:inherit;color:inherit;transition:background .15s}
 .brand-tile:last-child{border-right:0}
 .brand-tile:hover{background:var(--paper-2)}
-.brand-tile .bn{display:block;font-weight:800;font-stretch:72%;font-size:1.65rem;text-transform:uppercase;letter-spacing:.02em;line-height:1}
+.brand-tile .bn{display:block;font-family:var(--display);font-weight:700;font-size:1.4rem;letter-spacing:-.01em;line-height:1;color:var(--navy)}
 .brand-tile .bm{display:block;margin-top:8px}
 @media (max-width:820px){.brands-grid{grid-template-columns:repeat(2,1fr)}.brand-tile{border-bottom:1px solid var(--line)}.brand-tile:nth-child(2n){border-right:0}.brand-tile:last-child{grid-column:1/-1;border-bottom:0}}
 
@@ -132,10 +151,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(243,241,236,.94);backdro
 .compare{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line)}
 .compare th,.compare td{padding:18px 20px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 .compare thead th{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:400;background:var(--paper-2)}
-.compare thead th:last-child{color:var(--signal);font-weight:600}
+.compare thead th:last-child{color:var(--signal-text);font-weight:600}
 .compare td:first-child{font-weight:600;width:30%}
 .compare td:nth-child(2){color:var(--muted)}
-.compare td:last-child{background:#FFF8F5}
+.compare td:last-child{background:#EEF3F8;color:var(--navy)}
 .compare tr:last-child td{border-bottom:0}
 @media (max-width:700px){
   .compare thead{display:none}
@@ -145,26 +164,27 @@ header{position:sticky;top:0;z-index:50;background:rgba(243,241,236,.94);backdro
   .compare td:first-child{width:auto;padding-top:18px}
   .compare td:nth-child(2)::before{content:"Generalista: ";font-family:var(--mono);font-size:.7rem;text-transform:uppercase}
   .compare td:last-child{padding-bottom:18px;background:none}
-  .compare td:last-child::before{content:"Kessel: ";font-family:var(--mono);font-size:.7rem;text-transform:uppercase;color:var(--signal)}
+  .compare td:last-child::before{content:"ThermoFix: ";font-family:var(--mono);font-size:.7rem;text-transform:uppercase;color:var(--signal-text)}
 }
 
 /* Brand selector */
-.selector{display:grid;grid-template-columns:240px 1fr;border:1px solid var(--ink);background:var(--card)}
-.tablist{display:flex;flex-direction:column;border-right:1px solid var(--ink)}
-.tab{appearance:none;background:none;border:0;border-bottom:1px solid var(--line);padding:18px 20px;text-align:left;font:800 1.35rem/1 var(--sans);font-stretch:72%;text-transform:uppercase;letter-spacing:.02em;cursor:pointer;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+.selector{display:grid;grid-template-columns:240px 1fr;border:1px solid var(--navy);border-radius:8px;overflow:hidden;background:var(--card)}
+.tablist{display:flex;flex-direction:column;border-right:1px solid var(--navy)}
+.tab{appearance:none;background:none;border:0;border-bottom:1px solid var(--line);padding:18px 20px;text-align:left;font:700 1.2rem/1 var(--display);letter-spacing:-.01em;cursor:pointer;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
 .tab:last-child{border-bottom:0}
 .tab::after{content:"→";font-family:var(--mono);font-size:.9rem;opacity:0}
-.tab[aria-selected="true"]{color:var(--paper);background:var(--ink)}
+.tab[aria-selected="true"]{color:#fff;background:var(--navy)}
+.tab[aria-selected="true"]::after{color:#FF3B3B}
 .tab[aria-selected="true"]::after{opacity:1}
 .tab:hover:not([aria-selected="true"]){color:var(--ink);background:var(--paper-2)}
 .panel{padding:34px 36px;display:grid;grid-template-columns:1.2fr 1fr;gap:36px}
-.panel h3{font-size:2.4rem;margin-bottom:10px}
+.panel h3{font-size:2.1rem;margin-bottom:10px}
 .panel .origin{margin-bottom:18px}
 .panel p.desc{color:var(--ink-2);margin-bottom:22px}
 .panel h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:400;margin-bottom:10px}
 .panel ul{list-style:none}
 .panel ul li{padding:9px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px}
-.panel ul li::before{content:"—";color:var(--signal)}
+.panel ul li::before{content:"—";color:var(--red)}
 .panel .equip{font-family:var(--mono);font-size:.85rem;margin-bottom:24px}
 .spec{border:1px solid var(--line);background:var(--paper)}
 .spec div{display:flex;justify-content:space-between;gap:10px;padding:13px 16px;border-bottom:1px solid var(--line);font-size:.94rem}
@@ -173,7 +193,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(243,241,236,.94);backdro
 .panel .btn{width:100%;margin-top:18px}
 @media (max-width:900px){
   .selector{grid-template-columns:1fr}
-  .tablist{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--ink);scrollbar-width:none}
+  .tablist{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--navy);scrollbar-width:none}
   .tab{border-bottom:0;border-right:1px solid var(--line);flex:1 0 auto;font-size:1.1rem;padding:16px 18px}
   .tab::after{display:none}
   .panel{grid-template-columns:1fr;padding:26px 22px;gap:26px}
@@ -181,111 +201,112 @@ header{position:sticky;top:0;z-index:50;background:rgba(243,241,236,.94);backdro
 }
 
 /* Prices */
-.prices{border:1px solid var(--ink);background:var(--card)}
+.prices{border:1px solid var(--navy);border-radius:8px;overflow:hidden;background:var(--card)}
 .price-row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:22px 26px;border-bottom:1px solid var(--line);align-items:baseline}
 .price-row:last-child{border-bottom:0}
-.price-row h3{font-size:1.5rem;font-stretch:78%}
+.price-row h3{font-size:1.3rem}
 .price-row p{color:var(--muted);font-size:.94rem;margin-top:6px;max-width:560px}
-.price-row .amt{font-family:var(--mono);font-weight:600;font-size:1.25rem;white-space:nowrap;text-align:right}
+.price-row .amt{font-family:var(--mono);font-weight:600;font-size:1.2rem;color:var(--navy);white-space:nowrap;text-align:right}
 .price-row .amt small{display:block;font-weight:400;font-size:.72rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
-.price-row.feat{background:var(--ink);color:var(--paper)}
-.price-row.feat p,.price-row.feat .amt small{color:#A9A69E}
-.price-row.feat .tag{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;background:var(--signal);color:#fff;padding:3px 7px;border-radius:2px;margin-left:10px;vertical-align:middle;font-stretch:100%}
+.price-row.feat{background:var(--navy);color:#fff}
+.price-row.feat .amt{color:#fff}
+.price-row.feat p,.price-row.feat .amt small{color:#B8C6D4}
+.price-row.feat .tag{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;background:var(--signal);color:#fff;padding:3px 7px;border-radius:2px;margin-left:10px;vertical-align:middle;}
 .price-note{margin-top:14px;font-size:.86rem;color:var(--muted)}
 @media (max-width:600px){.price-row{grid-template-columns:1fr;gap:10px;padding:20px}.price-row .amt{text-align:left}}
 
 /* Error codes */
 .codes{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
 .lookup{background:var(--plate);color:var(--plate-text);border-radius:6px;padding:28px}
-.lookup label{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#87857F;margin-bottom:8px}
+.lookup label{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--steel);margin-bottom:8px}
 .lookup-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
-.lookup select,.lookup input{width:100%;font:600 1.05rem var(--mono);background:#111213;color:#fff;border:1px solid var(--plate-line);border-radius:3px;padding:13px 12px;text-transform:uppercase}
-.lookup input::placeholder{color:#5D5F63}
-.display{background:#0C0D0E;border:1px solid var(--plate-line);border-radius:3px;padding:20px;min-height:150px;font-family:var(--mono)}
-.display .code{font-size:2.2rem;font-weight:600;color:#FF6B4A;line-height:1;text-shadow:0 0 14px rgba(255,107,74,.35)}
-.display .meaning{color:#F2F0EA;margin-top:12px;font-size:.95rem;line-height:1.5;font-family:var(--sans)}
-.display .hint{color:#87857F;margin-top:10px;font-size:.78rem}
+.lookup select,.lookup input{width:100%;font:600 1.05rem var(--mono);background:#001A33;color:#fff;border:1px solid var(--plate-line);border-radius:3px;padding:13px 12px;text-transform:uppercase}
+.lookup input::placeholder{color:#5F7A94}
+.display{background:#000;border:1px solid var(--plate-line);border-radius:3px;padding:20px;min-height:150px;font-family:var(--mono)}
+.display .code{font-size:2.2rem;font-weight:600;color:#FF2A2A;line-height:1;text-shadow:0 0 14px rgba(238,0,0,.45)}
+.display .meaning{color:var(--white);margin-top:12px;font-size:.95rem;line-height:1.5;font-family:var(--sans)}
+.display .hint{color:var(--steel);margin-top:10px;font-size:.78rem}
 .lookup .btn{width:100%;margin-top:16px}
-.common h3{font-size:1.5rem;margin-bottom:14px}
+.common h3{font-size:1.3rem;margin-bottom:14px}
 .code-chips{display:flex;flex-wrap:wrap;gap:8px}
-.code-chip{appearance:none;font:600 .82rem var(--mono);border:1px solid var(--line);background:var(--card);padding:9px 12px;border-radius:3px;cursor:pointer;color:var(--ink)}
-.code-chip:hover{border-color:var(--ink)}
+.code-chip{appearance:none;font:600 .82rem var(--mono);border:1px solid var(--line);background:var(--card);padding:9px 12px;border-radius:6px;cursor:pointer;color:var(--navy)}
+.code-chip:hover{border-color:var(--navy);background:var(--paper-2)}
 .code-chip span{color:var(--muted);font-weight:400}
-.disclaimer{margin-top:22px;font-size:.86rem;color:var(--muted);border-left:3px solid var(--signal);padding-left:14px}
+.disclaimer{margin-top:22px;font-size:.86rem;color:var(--muted);border-left:3px solid var(--red);padding-left:14px}
 @media (max-width:860px){.codes{grid-template-columns:1fr}}
 @media (max-width:420px){.lookup{padding:20px}.lookup-fields{grid-template-columns:1fr}}
 
 /* Process */
-.process{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+.process{display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--navy)}
 .step{padding:26px 24px 0 0;border-right:1px solid var(--line);margin-right:24px}
 .step:last-child{border-right:0;margin-right:0}
-.step .n{font-family:var(--mono);color:var(--signal);font-weight:600;font-size:.9rem}
-.step h3{font-size:1.55rem;margin:14px 0 10px}
+.step .n{font-family:var(--mono);color:var(--signal-text);font-weight:600;font-size:.9rem}
+.step h3{font-size:1.3rem;margin:14px 0 10px}
 .step p{color:var(--ink-2);font-size:.96rem}
 @media (max-width:900px){.process{grid-template-columns:1fr 1fr;row-gap:30px}.step:nth-child(2){border-right:0;margin-right:0}}
 @media (max-width:560px){.process{grid-template-columns:1fr}.step{border-right:0;margin-right:0;padding-right:0;border-bottom:1px solid var(--line);padding-bottom:24px}.step:last-child{border-bottom:0}}
-.warranty{margin-top:48px;display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center;border:1.5px solid var(--ink);padding:24px 28px;background:var(--card)}
-.warranty .seal{width:76px;height:76px;border-radius:50%;border:2px solid var(--signal);color:var(--signal);display:grid;place-items:center;text-align:center;font-family:var(--mono);font-weight:600;font-size:.7rem;line-height:1.15;text-transform:uppercase}
-.warranty .seal b{display:block;font-family:var(--sans);font-stretch:72%;font-size:1.6rem}
-.warranty h3{font-size:1.6rem;margin-bottom:6px}
+.warranty{margin-top:48px;display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center;border:1.5px solid var(--navy);border-radius:8px;padding:24px 28px;background:var(--card)}
+.warranty .seal{width:76px;height:76px;border-radius:50%;border:2px solid var(--red);color:var(--signal-text);display:grid;place-items:center;text-align:center;font-family:var(--mono);font-weight:600;font-size:.7rem;line-height:1.15;text-transform:uppercase}
+.warranty .seal b{display:block;font-family:var(--display);font-size:1.6rem}
+.warranty h3{font-size:1.4rem;margin-bottom:6px}
 .warranty p{color:var(--ink-2)}
 @media (max-width:700px){.warranty{grid-template-columns:auto 1fr}.warranty .btn{grid-column:1/-1}}
 
 /* Zones */
-.zones{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);border-top:3px solid var(--navy)}
 .zone{padding:22px 22px 22px 0;border-bottom:1px solid var(--line)}
-.zone h3{font-size:1.3rem;font-stretch:78%;margin-bottom:6px}
+.zone h3{font-size:1.15rem;margin-bottom:6px}
 .zone p{color:var(--muted);font-size:.93rem}
 @media (max-width:760px){.zones{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.zones{grid-template-columns:1fr}}
 
 /* Reviews */
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.review{background:var(--card);border:1px solid var(--line);padding:26px;display:flex;flex-direction:column}
+.review{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px;display:flex;flex-direction:column}
 .review .meta{display:flex;justify-content:space-between;margin-bottom:16px}
-.review .stars{color:var(--signal);letter-spacing:2px}
+.review .stars{color:var(--red);letter-spacing:2px}
 .review blockquote{font-size:1.05rem;color:var(--ink);flex:1}
 .review .who{margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font-size:.9rem}
 .review .who span{display:block;color:var(--muted);font-size:.84rem}
 .rating-line{display:flex;align-items:baseline;gap:14px;margin-bottom:26px}
-.rating-line b{font-weight:800;font-stretch:72%;font-size:3rem;line-height:1}
+.rating-line b{font-family:var(--display);font-weight:700;font-size:2.8rem;line-height:1;color:var(--navy)}
 @media (max-width:900px){.reviews-grid{grid-template-columns:1fr}}
 
 /* FAQ */
 .faq{max-width:860px}
 details{border-bottom:1px solid var(--line)}
-details:first-child{border-top:1px solid var(--ink)}
-summary{cursor:pointer;list-style:none;font-weight:600;font-size:1.1rem;padding:22px 0;display:flex;justify-content:space-between;gap:20px}
+details:first-child{border-top:3px solid var(--navy)}
+summary{cursor:pointer;list-style:none;font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--navy);padding:22px 0;display:flex;justify-content:space-between;gap:20px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-family:var(--mono);color:var(--signal);font-size:1.3rem;line-height:1}
+summary::after{content:"+";font-family:var(--mono);color:var(--red);font-size:1.3rem;line-height:1}
 details[open] summary::after{content:"−"}
 details p{color:var(--ink-2);padding:0 40px 24px 0}
 
 /* Final CTA */
-.final{background:var(--ink);color:var(--paper);padding:96px 0}
+.final{background:var(--navy);color:#fff;padding:96px 0}
 .final-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:end}
-.final h2{font-size:clamp(2.4rem,6.5vw,5rem)}
-.final h2 .sig{color:#FF6B4A}
-.final p{color:#B5B2AA;font-size:1.1rem;margin-bottom:24px}
+.final h2{font-size:clamp(2.2rem,5.4vw,4rem)}
+.final h2 .sig{color:#FF3B3B}
+.final p{color:#C3D0DD;font-size:1.1rem;margin-bottom:24px}
 .final .btn{width:100%;margin-bottom:12px}
-.final .btn-ghost{border-color:#5C5B57;color:var(--paper)}
-.final .btn-ghost:hover{background:var(--paper);color:var(--ink)}
+.final .btn-ghost{border-color:#5C7A99;color:#fff}
+.final .btn-ghost:hover{background:#fff;color:var(--navy)}
 @media (max-width:820px){.final-grid{grid-template-columns:1fr}.final{padding:72px 0}}
 
-footer{background:#0E0E0E;color:#9C9991;padding:48px 0 110px;font-size:.9rem}
+footer{background:var(--black);color:#9FB0C2;padding:48px 0 110px;font-size:.9rem}
 .foot{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:30px}
-footer h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#6E6C66;font-weight:400;margin-bottom:12px}
+footer h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--steel);font-weight:400;margin-bottom:12px}
 footer li{list-style:none;margin:.3rem 0}
 footer a{text-decoration:none}
 footer a:hover{color:#fff}
 footer .logo-word{color:#fff}
-footer .logo-mark{background:#fff;color:var(--ink)}
-.legal{margin-top:36px;padding-top:20px;border-top:1px solid #2A2A2A;font-size:.78rem;color:#6E6C66;line-height:1.6}
+footer .logo-word em{color:#FF3B3B}
+.legal{margin-top:36px;padding-top:20px;border-top:1px solid #1E2E40;font-size:.78rem;color:#7D8E9F;line-height:1.6}
 @media (max-width:760px){.foot{grid-template-columns:1fr}}
 @media (min-width:761px){footer{padding-bottom:48px}}
 
 /* Mobile action bar */
-.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;grid-template-columns:1fr 1fr;background:var(--ink);border-top:1px solid #333}
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;grid-template-columns:1fr 1fr;background:var(--navy);border-top:1px solid var(--petrol)}
 .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 10px;color:#fff;text-decoration:none;font-weight:600}
 .mbar a svg{width:19px;height:19px}
 .mbar a.wa{background:var(--wa)}
@@ -302,7 +323,6 @@ footer .logo-mark{background:#fff;color:var(--ink)}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3Z"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
-  <symbol id="i-k" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" d="M6 3v18M6 13l9-10M9.5 10 17 21"/></symbol>
 </svg>
 
 <div class="strip">
@@ -315,9 +335,9 @@ footer .logo-mark{background:#fff;color:var(--ink)}
 
 <header>
   <div class="wrap nav">
-    <a href="#" class="logo" aria-label="Kessel, inicio">
-      <span class="logo-mark"><svg width="22" height="22"><use href="#i-k"/></svg></span>
-      <span><span class="logo-word">Kessel</span><span class="logo-sub">Técnica en boilers alemanes</span></span>
+    <a href="#" class="logo" aria-label="ThermoFix, inicio">
+      <img src="assets/thermofix-icono.png" alt="" width="44" height="43">
+      <span><span class="logo-word">Thermo<em>Fix</em></span><span class="logo-sub">Técnica en boilers alemanes</span></span>
     </a>
     <nav class="nav-links" aria-label="Principal">
       <a href="#marcas">Marcas</a><a href="#precios">Precios</a><a href="#codigos">Códigos de error</a><a href="#zonas">Zonas</a><a href="#preguntas">Preguntas</a>
@@ -331,7 +351,7 @@ footer .logo-mark{background:#fff;color:var(--ink)}
   <div class="wrap hero-grid">
     <div>
       <span class="label">Especialistas, no generalistas · Ciudad de México</span>
-      <h1>Boilers alemanes.<br><span class="sig">Técnicos que</span><br>los conocen.</h1>
+      <h1>Boilers alemanes.<br><span class="sig">Técnicos que los conocen.</span></h1>
       <p class="lead">Diagnóstico, reparación y mantenimiento de <strong>Vaillant, Viessmann, Wolf, Bosch y Junkers</strong>. Leemos el código de error de tu modelo, traemos refacción original y te damos el precio antes de abrir el equipo.</p>
       <div class="hero-cta">
         <a class="btn btn-primary js-wa" href="https://wa.me/525500000000" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Mándanos foto y código de error</a>
@@ -346,7 +366,7 @@ footer .logo-mark{background:#fff;color:var(--ink)}
 
     <dl class="plate" aria-label="Ficha del servicio">
       <span class="rv1"></span><span class="rv2"></span>
-      <div class="plate-top"><strong>Kessel</strong><span>Nº CDMX-2026</span></div>
+      <div class="plate-top"><span class="wm"><img src="assets/thermofix-icono.png" alt="" width="38" height="37"><span>Thermo<em>Fix</em></span></span><span>Nº CDMX-2026</span></div>
       <div class="plate-row"><dt>Servicio</dt><dd>Técnico especializado independiente</dd></div>
       <div class="plate-row"><dt>Marcas</dt><dd>VAILLANT · VIESSMANN · WOLF · BOSCH · JUNKERS</dd></div>
       <div class="plate-row"><dt>Equipos</dt><dd>Calentador de paso · Caldera combi · Condensación</dd></div>
@@ -377,7 +397,7 @@ footer .logo-mark{background:#fff;color:var(--ink)}
       </div>
     </div>
     <table class="compare reveal">
-      <thead><tr><th scope="col">Lo que importa</th><th scope="col">Técnico generalista</th><th scope="col">Kessel</th></tr></thead>
+      <thead><tr><th scope="col">Lo que importa</th><th scope="col">Técnico generalista</th><th scope="col">ThermoFix</th></tr></thead>
       <tbody>
         <tr><td>Código de error en pantalla</td><td>Lo busca en internet frente a ti.</td><td>Sabe qué significa en tu modelo y qué revisar primero.</td></tr>
         <tr><td>Refacciones</td><td>Piezas "compatibles" o genéricas.</td><td>Originales de la marca, con factura y número de parte.</td></tr>
@@ -585,13 +605,13 @@ footer .logo-mark{background:#fff;color:var(--ink)}
   <div class="wrap">
     <div class="foot">
       <div>
-        <a href="#" class="logo" style="margin-bottom:14px"><span class="logo-mark"><svg width="22" height="22"><use href="#i-k"/></svg></span><span class="logo-word">Kessel</span></a>
+        <a href="#" class="logo" style="margin-bottom:14px"><img src="assets/thermofix-icono.png" alt="" width="44" height="43"><span class="logo-word">Thermo<em>Fix</em></span></a>
         <p>Servicio técnico especializado en boilers y calentadores alemanes en la Ciudad de México.</p>
       </div>
       <div><h4>Horario</h4><ul><li>Lunes a sábado</li><li>8:00 – 20:00</li><li>Urgencias el mismo día</li></ul></div>
       <div><h4>Contacto</h4><ul><li><a href="tel:+525500000000">55 0000 0000</a></li><li><a class="js-wa" href="https://wa.me/525500000000" target="_blank" rel="noopener">WhatsApp</a></li><li>contacto@ejemplo.mx</li></ul></div>
     </div>
-    <p class="legal">Vaillant, Viessmann, Wolf, Bosch y Junkers son marcas registradas de sus respectivos titulares. Kessel es un servicio técnico independiente y no está afiliado a ninguna de ellas.<br>Sitio de demostración creado por NorthClick. Nombre, datos de contacto, precios y opiniones son de ejemplo.</p>
+    <p class="legal">Vaillant, Viessmann, Wolf, Bosch y Junkers son marcas registradas de sus respectivos titulares. ThermoFix es un servicio técnico independiente y no está afiliado a ninguna de ellas.<br>Sitio de demostración creado por NorthClick. Nombre, datos de contacto, precios y opiniones son de ejemplo.</p>
   </div>
 </footer>
 
@@ -653,7 +673,7 @@ const BRANDS = {
 };
 
 // Generic WhatsApp links
-document.querySelectorAll('.js-wa').forEach(a => a.href = wa('Hola Kessel, tengo un boiler alemán y necesito servicio. Marca: '));
+document.querySelectorAll('.js-wa').forEach(a => a.href = wa('Hola ThermoFix, tengo un boiler alemán y necesito servicio. Marca: '));
 
 // Brand selector
 const $ = id => document.getElementById(id);
@@ -669,7 +689,7 @@ function selectBrand(key, focus){
   $('b-faults').innerHTML = b.faults.map(f => `<li>${f}</li>`).join('');
   $('b-spec').innerHTML = b.spec.map(([k,v]) => `<div><span>${k}</span><b>${v}</b></div>`).join('');
   $('b-wa-label').textContent = 'Escribir sobre mi ' + b.name;
-  $('b-wa').href = wa(`Hola Kessel, tengo un ${b.name}. Modelo: ____. Falla / código: ____. Colonia: ____.`);
+  $('b-wa').href = wa(`Hola ThermoFix, tengo un ${b.name}. Modelo: ____. Falla / código: ____. Colonia: ____.`);
 }
 tabs.forEach((t, i) => {
   t.addEventListener('click', () => selectBrand(t.dataset.brand));
@@ -694,7 +714,7 @@ function lookup(){
   if (!code) { $('lk-out-meaning').textContent = 'Elige la marca y escribe el código que aparece en la pantalla del equipo.'; $('lk-out-hint').textContent = ''; }
   else if (hit) { $('lk-out-meaning').textContent = hit; $('lk-out-hint').textContent = 'Lo que revisa el técnico: ' + b.hints[code]; }
   else { $('lk-out-meaning').textContent = 'Este código no está en nuestra guía rápida. Mándanos una foto de la pantalla y el modelo, y te decimos qué revisar.'; $('lk-out-hint').textContent = ''; }
-  $('lk-wa').href = wa(`Hola Kessel, mi ${b.name} muestra el código ${code || '____'}. Modelo: ____. Colonia: ____.`);
+  $('lk-wa').href = wa(`Hola ThermoFix, mi ${b.name} muestra el código ${code || '____'}. Modelo: ____. Colonia: ____.`);
 }
 lkBrand.addEventListener('change', () => { lookup(); renderChips(); });
 lkCode.addEventListener('input', lookup);
